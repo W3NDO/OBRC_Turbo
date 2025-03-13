@@ -1,7 +1,7 @@
 <div class="flex flex-wrap gap-4 justify-center w-full p-4">
     <% if @records %>
         <% @records.each do |record| %>
-            <%= render partial "towncard", locals: {record: record} %>
+            <%= render partial: "towncard", locals: {record: record} %>
         <% end %>
     <% else %> 
         <% 5.times do %>
