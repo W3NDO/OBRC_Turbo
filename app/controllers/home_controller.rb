@@ -8,6 +8,5 @@ class HomeController < ApplicationController
     }
 
     @records = City.all
-
   end
 end
