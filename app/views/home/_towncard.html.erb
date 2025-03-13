@@ -1,4 +1,4 @@
-<div class="bg-white shadow-lg rounded-2xl p-6 w-80 overflow-hidden mx-3">
+<div class="bg-white shadow-lg rounded-2xl p-6 w-80 overflow-hidden mx-3" id=<%= "city_#{record[:id]}"%> >
   <h2 class="text-xl font-bold text-gray-800 whitespace-nowrap overflow-hidden text-ellipsis">
     <%= record[:name] %>
   </h2>
@@ -7,19 +7,3 @@
     <p class="text-gray-600">🌡️ <strong>Latest Temp :</strong> <%= record[:recent] %>°C</p>
   </div>
 </div>
-
-<turbo-stream_from "cities_channel" action="prepend" target="city">
-  <template>
-    <turbo-frame id=<%= record[:id] %> >
-      <div class="bg-white shadow-lg rounded-2xl p-6 w-80 overflow-hidden mx-3">
-        <h2 class="text-xl font-bold text-gray-800 whitespace-nowrap overflow-hidden text-ellipsis">
-          <%= record[:name] %>
-        </h2>
-        <div class="mt-4">
-          <p class="text-gray-600">📊 <strong>Avg Temp :</strong> <%= record[:average] %>°C</p>
-          <p class="text-gray-600">🌡️ <strong>Latest Temp :</strong> <%= record[:recent] %>°C</p>
-        </div>
-      </div>
-    </turbo-frame>
-  </template>
-</turbo-stream>

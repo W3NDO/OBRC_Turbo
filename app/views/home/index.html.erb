@@ -1,11 +1,15 @@
-<div class="flex flex-wrap gap-4 justify-center w-full p-4">
-    <% if @records %>
-        <% @records.each do |record| %>
-            <%= render partial: "towncard", locals: {record: record} %>
-        <% end %>
-    <% else %> 
-        <% 5.times do %>
-            <%= render partial: "towncard", locals: {record: @placeholder_record} %>
+<%= turbo_stream_from "cities" %>
+
+<div id="cities_list" class="flex flex-wrap gap-4 justify-center w-full p-4">
+  <% if @records.present? %>
+    <% @records.each do |record| %>
+        <%= turbo_stream_from "city_#{record.id}" %>
+        
+        <%= turbo_frame_tag dom_id(record) do %>
+            <%= render partial: "home/towncard", locals: { record: record } %>
         <% end %>
     <% end %>
+  <% else %> 
+    <%= render partial: "towncard", locals: { record: @placeholder_record } %>
+  <% end %>
 </div>

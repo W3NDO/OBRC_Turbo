@@ -1,6 +1,7 @@
 class CitiesChannel < ApplicationCable::Channel
   def subscribed
-    stream_from "cities_channel"
+    city = City.find(params[:id])
+    stream_from "city_#{city.id}"
   end
 
   def unsubscribed
