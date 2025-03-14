@@ -2,9 +2,9 @@ class HomeController < ApplicationController
   def index
     @placeholder_record = {
       id: 1,
-      town: "Place Holder Town",
-      avg: 22.3,
-      recent: 18
+      name: "Place Holder Town",
+      average: 0.0,
+      recent: 0.0
     }
 
     @records = City.all

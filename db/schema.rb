@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_03_13_181645) do
+ActiveRecord::Schema[7.0].define(version: 2025_03_14_021339) do
   create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.integer "average"
-    t.integer "recent"
+    t.float "average"
+    t.float "recent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "count", default: 0
   end
 end
