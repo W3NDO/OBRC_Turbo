@@ -76,3 +76,8 @@ gem "tailwindcss-ruby", "~> 4.0"
 gem "tailwindcss-rails", "~> 4.2"
 
 gem "rubocop", "~> 1.74"
+
+gem "rubocop-rails", "~> 2.30"
+gem "rubocop-capybara", "~> 2.22"
+
+gem "pry", "~> 0.15.2"

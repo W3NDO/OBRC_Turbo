@@ -3,7 +3,9 @@
     <%= record[:name] %>
   </h2>
   <div class="mt-4">
-    <p class="text-gray-600">📊 <strong>Avg Temp :</strong> <%= record[:average] %>°C</p>
     <p class="text-gray-600">🌡️ <strong>Latest Temp :</strong> <%= record[:recent] %>°C</p>
+    <p class="text-gray-600">📊 <strong>Avg Temp :</strong> <%= record[:average] %>°C</p>
+    <p class="text-gray-600">🌡️ <strong>Minimum Temp :</strong> <%= record[:minimum] %>°C</p>
+    <p class="text-gray-600">🌡️ <strong>Maximum Temp :</strong> <%= record[:maximum] %>°C</p>
   </div>
 </div>

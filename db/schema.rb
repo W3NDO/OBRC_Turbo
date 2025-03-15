@@ -18,5 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_03_14_021339) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "count", default: 0
+    t.float "minimum"
+    t.float "maximum"
   end
 end
